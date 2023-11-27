@@ -5,6 +5,17 @@ public class RadioTest {
 
     Radio radio = new Radio();
 
+
+    @Test
+    public void radioStation() {
+        Radio radio = new Radio(14);
+        radio.setCurrentRadioStation(10);
+
+        int expected = 10;
+        int actual = radio.getCurrentRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
     @Test
     public void setStation() {
         radio.setCurrentRadioStation(9);
